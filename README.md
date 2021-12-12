@@ -7,4 +7,4 @@
 
 ## 文章目录
 
-![redis笔记第1篇-redis简介](./img/01-introduce.md)
+[01-redis笔记第1篇-redis简介](./note/01-introduce.md)
