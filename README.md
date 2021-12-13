@@ -9,4 +9,4 @@
 
 [01-redis入门知识第1篇-redis简介](./note/01-introduce.md)
 
-[02-redis的安装](./note/01-introduce.md)
+[02-redis入门知识第2篇-redis的安装与测试](./note/02-installation.md)
