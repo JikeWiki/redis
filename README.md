@@ -7,4 +7,6 @@
 
 ## 文章目录
 
-[01-redis笔记第1篇-redis简介](./note/01-introduce.md)
+[01-redis入门知识第1篇-redis简介](./note/01-introduce.md)
+
+[02-redis的安装](./note/01-introduce.md)

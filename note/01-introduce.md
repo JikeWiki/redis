@@ -1,4 +1,4 @@
-# redis笔记第1篇-redis简介
+# redis入门知识第1篇-redis简介
 
 ## 1. 概述
 
