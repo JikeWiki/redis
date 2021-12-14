@@ -2,7 +2,7 @@
 
 ## 1. 概述
 
-![02-00](../img/02-00.png)
+![02-00](../img/02-00.jpg)
 
 在我的上一篇笔记中，介绍了**redis**的一些基本概念。在本文，我们将来安装 **redis** 的学习环境。我们将在Linux环境中安装redis服务，如果你现在没有Linux环境，可以通过这个链接参考Linux虚拟机环境的搭建方法：[使用Multipass快速创建和管理Ubuntu Server虚拟机](https://blog.jkdev.cn/index.php/archives/326/)。
 
