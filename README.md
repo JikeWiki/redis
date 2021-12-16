@@ -11,4 +11,6 @@
 
 [02-redis入门知识第2篇-redis的安装与测试](./note/02-installation.md)
 
-[03-redis入门知识第3篇-redis的基本操作与数据类型](./note/02-installation.md)
+[03-redis入门知识第3篇-redis的基本操作与数据类型](./note/03-basic.md)
+
+[04-redis入门知识第4篇-redis中的字符串](./note/04-string.md)
