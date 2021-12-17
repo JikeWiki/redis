@@ -14,3 +14,6 @@
 [03-redis入门知识第3篇-redis的基本操作与数据类型](./note/03-basic.md)
 
 [04-redis入门知识第4篇-redis中的string数据类型与基本的数据存取操作](./note/04-string.md)
+
+[05-redis入门知识第5篇-hash数据类型与基本操作](./note/05-hash.md)
+
