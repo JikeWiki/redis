@@ -17,4 +17,6 @@
 
 [05-redis入门知识第5篇-hash数据类型与基本操作](./note/05-hash.md)
 
+[06-redis入门知识第6篇-list数据类型与基本操作](./note/06-list.md)
+
 
