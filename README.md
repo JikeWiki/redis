@@ -19,4 +19,6 @@
 
 [06-redis入门知识第6篇-list数据类型与基本操作](./note/06-list.md)
 
+[07-redis入门知识第7篇-set数据类型与基本操作](./note/07-set.md)
+
 
