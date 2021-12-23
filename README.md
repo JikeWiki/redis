@@ -21,4 +21,5 @@
 
 [07-redis入门知识第7篇-set数据类型的基本操作](./note/07-set.md)
 
+[08-redis入门知识第8篇-sorted_set数据类型的基本操作](./note/08-sorted_set.md)
 
