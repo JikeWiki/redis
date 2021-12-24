@@ -12,13 +12,13 @@
 
 ## 2. sorted set 数据类型的基本操作
 
-- 添加数据
+### 2.1. 添加数据
 
 ```shell
 zadd key score1 member1 [score2 member2]
 ```
 
-- 获取全部数据
+### 2.2. 获取全部数据
 
 ```shell
 # 顺序排列取数据
@@ -28,20 +28,20 @@ zrevrange key start stop [withscores]
 ```
 
 
-- 删除数据
+### 2.3. 删除数据
 
 ```shell
 zrem key member [member...]
 ```
 
-- 按条件获取数据
+### 2.4. 按条件获取数据
 
 相关符号如下：
 
-+inf: 表示大于任何数
--inf: 表示小于任何数
-(: 左开区间
-): 右开区间
+**+inf**: 表示大于任何数
+**-inf**: 表示小于任何数
+**(**: 左开区间
+**)**: 右开区间
 
 指令格式
 ```shell
@@ -54,8 +54,42 @@ zreverangebyscore key min max [withscores] [limit]
 查询示例
 
 ```shell
-# 查询score为80到任意大的5条数据
-zrangebyscore scores 80 +inf withscores limit 0 5
+# 添加数据
+zadd scores 60 li 85 ww 91 zl 88 lxm 82 xsd 66 cc 100 glz 79 zs
+# 查询score为80到任意大的3条数据
+zrangebyscore scores 80 +inf withscores limit 0 3
 # 查询100到60的2条数据
 zrevrangebyscore scores 100 60  withscores limit 0 2
+```
+
+
+### 2.5. 按条件删除
+
+```shell
+# 根据索引删除数据
+zremrangebyrank key start stop
+# 根据score删除数据
+zremrangebyscore key min max
+```
+
+
+### 2.6. 获取集合总数
+
+```shell
+# 获取某个键的集合总数
+zcard key
+# 获取score范围值的集合总数
+zcount key min max
+```
+
+
+### 2.7. 有序集合的交并操作
+
+指令格式
+
+```shell
+# 将numkey个数据 交集保存到destination 中
+zinterstore destination numkey key [key1...] 	
+# 将numkey个数据并集 保存到destination 中
+zunionstore destination numkey key [key1...]
 ```
