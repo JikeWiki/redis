@@ -21,7 +21,9 @@ zadd key score1 member1 [score2 member2]
 - 获取全部数据
 
 ```shell
+# 顺序排列取数据
 zrange key start stop [withscores]
+# 倒叙排列取数据
 zrevrange key start stop [withscores]
 ```
 
@@ -30,4 +32,30 @@ zrevrange key start stop [withscores]
 
 ```shell
 zrem key member [member...]
+```
+
+- 按条件获取数据
+
+相关符号如下：
+
++inf: 表示大于任何数
+-inf: 表示小于任何数
+(: 左开区间
+): 右开区间
+
+指令格式
+```shell
+# 正序 根据score查询 
+zrangebyscore key min max [withscores] [limit]
+# 倒序 根据score查询
+zreverangebyscore key min max [withscores] [limit]
+```
+
+查询示例
+
+```shell
+# 查询score为80到任意大的5条数据
+zrangebyscore scores 80 +inf withscores limit 0 5
+# 查询100到60的2条数据
+zrevrangebyscore scores 100 60  withscores limit 0 2
 ```
