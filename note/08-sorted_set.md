@@ -136,7 +136,7 @@ zinterstore ss1 3 s1 s2 s3 aggregate max
 zinterstore ss2 3 s1 s2 s3 aggregate min
 ```
 
-分别取 ss1 和 ss2 的结果如下入所示
+分别取 ss1 和 ss2 的结果如下图所示
 
 ![08-02.png](../img/08-02.png)
 
