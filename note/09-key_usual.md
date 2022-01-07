@@ -69,11 +69,63 @@ pttl key
 persist key
 ```
 
+## 4. key的查询操作
+
+key可以使用正则表达式的方式进行查询，查询指令为 
+
+```shell
+keys pattern
+```
+
+以下是常用的查询示例
+
+- *: 匹配任意数量的任意字符
+- ?: 批评为任意一个符号
+- []: 匹配一个指定符号
+
+```shell
+# 查询所有
+keys *
+# 查询所有以it开头的key
+keys it*
+# 查询所有以it结尾的key
+keys *it
+# 查询前面以两个任字符，后面以it结尾的key
+keys ??it
+# 查询以user:开头，任意一个字符结尾的key
+keys user:?
+# 查询以u开头，以er:1结尾，中间包含 s 或 t 字符的key
+keys keys u[st]er:1
+```
+
+
+## 5. key的其他操作
+
+将key改名
+
+```shell
+# 当 newkey 已经存在时， rename 命令将覆盖旧值
+rename key newkey
+# 当且仅当 newkey 不存在时，将 key 改名为 newkey
+renamenx key newkey
+```
 
 
 
+对 list, set 或sorted set 中的元素进行排序输出
 
+```shell
+# 倒序输出
+sort key desc
+# 顺序输出
+sort key asc
+```
 
+查看更多通用操作
+
+```shell
+help @generic
+```
 
 
 
