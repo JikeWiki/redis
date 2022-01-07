@@ -23,3 +23,5 @@
 
 [08-redis入门知识第8篇-sorted_set数据类型的基本操作](./note/08-sorted_set.md)
 
+[09-redis入门知识第9篇-key的通用操作](./note/09-key_usual.md)
+

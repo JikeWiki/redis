@@ -8,7 +8,7 @@ key 是一个字符串，通过 key 获取 redis 中保存的数据，那么 key
 
 - 对于key有效控制的相关操作，例如：有效期设定、判定是否有效、有效状态的切换 等
 
-- 对于key快速查询操作，例如：按制定策略查询key
+- 对于key快速查询操作，例如：按指定策略查询key
 
 
 在本节，我们将介绍 key 的通用操作
@@ -115,9 +115,9 @@ renamenx key newkey
 对 list, set 或sorted set 中的元素进行排序输出
 
 ```shell
-# 倒序输出
+# 对liest数据倒序输出
 sort key desc
-# 顺序输出
+# 对lsit数据顺序输出
 sort key asc
 ```
 
