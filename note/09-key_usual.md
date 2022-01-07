@@ -101,7 +101,7 @@ keys keys u[st]er:1
 
 ## 5. key的其他操作
 
-将key改名
+**将key改名**
 
 ```shell
 # 当 newkey 已经存在时， rename 命令将覆盖旧值
@@ -112,16 +112,20 @@ renamenx key newkey
 
 
 
-对 list, set 或sorted set 中的元素进行排序输出
+**排序**
+
+对 list, set 或sorted set 中的元素进行排序输出，sort 指令功能比较多，在本文中我们暂且 指演示简单的用户
 
 ```shell
-# 对liest数据倒序输出
+# 对list数据倒序输出
 sort key desc
 # 对lsit数据顺序输出
 sort key asc
 ```
 
-查看更多通用操作
+
+
+**查看更多通用操作**
 
 ```shell
 help @generic
