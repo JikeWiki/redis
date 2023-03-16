@@ -4,13 +4,7 @@
 
 ![02-00](../img/02-00.jpg)
 
-在我的上一篇笔记中，介绍了**redis**的一些基本概念。在本文，我们将来安装 **redis** 的学习环境。我们将在Linux环境中安装redis服务，如果你现在没有Linux环境，可以通过这个链接参考Linux虚拟机环境的搭建方法：[使用Multipass快速创建和管理Ubuntu Server虚拟机](https://blog.jkdev.cn/index.php/archives/326/)。
-
-
-本文是该系列笔记的第2篇，你可以通过下列链接阅读往期的篇章：
-
-- [01-redis入门知识第1篇-redis简介](https://blog.jkdev.cn/index.php/archives/447/)
-
+在我的上一篇笔记中，介绍了**redis**的一些基本概念。在本文，我们将来安装 **redis** 的学习环境。我们将在Linux环境中安装redis服务，如果你现在没有Linux环境，可以通过这个链接参考Linux虚拟机环境的搭建方法：[使用Multipass快速创建和管理Ubuntu Server虚拟机](https://jiker.dev/posts/tools_run-ubuntu-on-multipass.html)。
 
 ## 2.安装过程
 
@@ -20,7 +14,7 @@
 
 在撰写这篇文章的时候，redis的最新稳定版本为`6.2.6`，所以我们这次安装6.2.6 版本，安装过程如下
 
-```
+```shell
 wget http://download.redis.io/releases/redis-6.2.6.tar.gz    #下载源代码
 tar xzf redis-6.2.6.tar.gz            #解压
 cd redis-6.2.6                        #进入源码目录
@@ -32,6 +26,7 @@ make                                  #编译
 ## 3.测试数据库
 
 进入 redis 目录，执行以下命令启动redis服务：
+
 ```shell
 ./src/redis-server redis.conf    #参数指定配置文件
 ```
@@ -55,16 +50,11 @@ redis> get foo
 
 ![02-02](../img/02-02.png)
 
-
-
 ## 4.关闭数据库服务
-
 
 在3中，我们使用了 `./src/redis-server redis.conf` 这样的指令开启了redis服务，如果需要关闭，只需要在命令行终端同时按键盘上的 `Ctrl` + `C` 键即可。如下图提示代表redis服务关闭成功
 
-
 ![02-03](../img/02-03.png)
-
 
 在的实际中的服务器上通常运行很多服务，不仅仅是redis，人们不可能用一只用一个终端一只保持redis一直在前台运行。因此人们通常使用 “后台运行” 的方式启动redis服务。如下命令
 
@@ -82,12 +72,12 @@ redis> get foo
 
 ![02-04](../img/02-04.png)
 
-
 ## 5.修改配置文件 redis.conf
 
 以下列举resdis安装后最常用的两个配置
 
-### （1）设置支持远程访问：
+### 5.1.设置支持远程访问
+
 找到以下一行
 
 ```shell
@@ -100,7 +90,8 @@ bind 127.0.0.1
 # bind 127.0.0.1
 ```
 
-### （2）默认没有密码，设置密码：
+### 5.2.默认没有密码，设置密码
+
 找到下面一行
 
 ```shell
@@ -109,13 +100,12 @@ bind 127.0.0.1
 
 取消注释，“foobared”就是密码，可以改成其他的，如改成“myredis”
 
-
 ```shell
 requirepass myredis
 ```
 
 重启服务，使用 a 参数传入密码才可以正常操作
 
-```
+```shell
 ./src/redis-cli -a myredis
 ```

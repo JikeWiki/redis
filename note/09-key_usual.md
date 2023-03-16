@@ -10,7 +10,6 @@ key 是一个字符串，通过 key 获取 redis 中保存的数据，那么 key
 
 - 对于key快速查询操作，例如：按指定策略查询key
 
-
 在本节，我们将介绍 key 的通用操作
 
 ## 2. key的基本通用操作
@@ -27,17 +26,15 @@ del key
 exists key
 ```
 
-
 获取 key 的类型
 
 ```shell
 type key
 ```
 
-
 ## 3. key的实效性控制操作
 
-**为指定key设置有效期**
+- 为指定key设置有效期
 
 ```shell
 # 设置key有效期为seconds秒
@@ -50,8 +47,7 @@ expireat key timestamp
 pexpireat key milliseconds-timestamp
 ```
 
-
-**获取key的有效时间**
+- 获取key的有效时间
 
 ```shell
 # 获取key的秒级有效时间
@@ -62,8 +58,7 @@ pttl key
 
 对于获取有效时间的指令，key 不存在返回 -2，key 存在但是没有关联超时时间返回 -1，如果key存在并且有关联时间，则返回具体的剩余时间秒或者毫秒。
 
-
-**切换key从实效性转为永久性**
+- 切换key从实效性转为永久性
 
 ```shell
 persist key
@@ -98,10 +93,9 @@ keys user:?
 keys keys u[st]er:1
 ```
 
-
 ## 5. key的其他操作
 
-**将key改名**
+- 将key改名
 
 ```shell
 # 当 newkey 已经存在时， rename 命令将覆盖旧值
@@ -110,9 +104,7 @@ rename key newkey
 renamenx key newkey
 ```
 
-
-
-**排序**
+- 排序
 
 对 list, set 或sorted set 中的元素进行排序输出，sort 指令功能比较多，在本文中我们暂且 指演示简单的用户
 
@@ -123,18 +115,8 @@ sort key desc
 sort key asc
 ```
 
-
-
-**查看更多通用操作**
+- 查看更多通用操作
 
 ```shell
 help @generic
 ```
-
-
-
-
-
-
-
-
